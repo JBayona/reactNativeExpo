@@ -15,9 +15,9 @@ import Styles from './Styles';
 // Your Parse initialization configuration goes here
 Parse.setAsyncStorage(AsyncStorage);
 
-const PARSE_APPLICATION_ID = 'YOUR_PARSE_APPLICATION_ID';
+const PARSE_APPLICATION_ID = 'fD4ALx9l4Ze7cnn5Y5kIA9ikxtYtqBd29GpgzSY0';
 const PARSE_HOST_URL = 'https://parseapi.back4app.com/';
-const PARSE_JAVASCRIPT_ID = 'YOUR_PARSE_JAVASCRIPT_ID';
+const PARSE_JAVASCRIPT_ID = 'w2DCeYNJLlSmq8ScQ43NsbThxkzbm2nEumrlXtBU';
 Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_ID);
 Parse.serverURL = PARSE_HOST_URL;
 
