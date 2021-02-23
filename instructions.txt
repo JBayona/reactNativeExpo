@@ -1,0 +1,3 @@
+cd ios
+npx pod-install
+yarn ios
