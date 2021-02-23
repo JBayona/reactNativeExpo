@@ -31,6 +31,7 @@ export const HelloUser = () => {
     <View style={Styles.login_wrapper}>
       <View style={Styles.form}>
         {username !== '' && <Text>{`Hello ${username}!`}</Text>}
+        <Text>{'This is the home Screen where we can see the details'}</Text>
       </View>
     </View>
   );

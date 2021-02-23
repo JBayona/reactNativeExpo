@@ -15,6 +15,7 @@ import Styles from './Styles';
 // Components
 import {UserLogInScreen} from './components/userLogInScreen';
 import {UserRegistrationScreen} from './components/userRegistrationScreen';
+import {HomeScreen} from './components/homeScreen';
 
 // Your Parse initialization configuration goes here
 Parse.setAsyncStorage(AsyncStorage);
@@ -24,32 +25,6 @@ const PARSE_HOST_URL = 'https://parseapi.back4app.com/';
 const PARSE_JAVASCRIPT_ID = 'w2DCeYNJLlSmq8ScQ43NsbThxkzbm2nEumrlXtBU';
 Parse.initialize(PARSE_APPLICATION_ID, PARSE_JAVASCRIPT_ID);
 Parse.serverURL = PARSE_HOST_URL;
-
-// Wrap your old app screen in a separate function, so you can create a screen inside the navigator
-// You can also declare your screens in a separate file, export and import here to reduce some clutter
-function HomeScreen() {
-  return (
-    <>
-      <StatusBar />
-      <SafeAreaView style={Styles.login_container}>
-        <View style={Styles.login_header}>
-          <Image
-            style={Styles.login_header_logo}
-            source={require('./assets/logo-back4app.png')}
-          />
-          <Text style={Styles.login_header_text}>
-            <Text style={Styles.login_header_text_bold}>
-              {'React Native on Back4App - '}
-            </Text>
-            {' Home'}
-          </Text>
-        </View>
-        <HelloUser />
-        <UserLogOut />
-      </SafeAreaView>
-    </>
-  );
-}
 
 // This method instantiates and creates a new StackNavigator
 const Stack = createStackNavigator();
