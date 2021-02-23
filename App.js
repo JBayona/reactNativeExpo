@@ -12,6 +12,9 @@ import {UserLogOut} from './UserLogOut';
 import {HelloUser} from './HelloUser';
 import Styles from './Styles';
 
+// Components
+import {UserLogInScreen} from './components/userLogInScreen';
+
 // Your Parse initialization configuration goes here
 Parse.setAsyncStorage(AsyncStorage);
 
@@ -41,29 +44,6 @@ function UserRegistrationScreen() {
           </Text>
         </View>
         <UserRegistration />
-      </SafeAreaView>
-    </>
-  );
-}
-
-function UserLogInScreen() {
-  return (
-    <>
-      <StatusBar />
-      <SafeAreaView style={Styles.login_container}>
-        <View style={Styles.login_header}>
-          <Image
-            style={Styles.login_header_logo}
-            source={require('./assets/logo-back4app.png')}
-          />
-          <Text style={Styles.login_header_text}>
-            <Text style={Styles.login_header_text_bold}>
-              {'React Native on Back4App - '}
-            </Text>
-            {' User login'}
-          </Text>
-        </View>
-        <UserLogIn />
       </SafeAreaView>
     </>
   );
