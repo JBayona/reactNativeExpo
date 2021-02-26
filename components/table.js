@@ -5,7 +5,13 @@ class AttendeeTable extends Component {
   constructor(props) {
     super(props);
   }
+
+  triggerFunction  = () => {
+    console.log('ENTRO AQUI');
+  }
+
   render() {
+    this.triggerFunction();
     return (
       <DataTable>
         <DataTable.Header>
