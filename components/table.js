@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import { DataTable } from "react-native-paper";
 
 class AttendeeTable extends Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
       <DataTable>
