@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {Text, View} from 'react-native';
 import Parse from 'parse/react-native';
+import { DataTable } from 'react-native-paper';
 import Styles from './Styles';
 
 export const HelloUser = () => {
@@ -32,7 +33,39 @@ export const HelloUser = () => {
       <View style={Styles.form}>
         {username !== '' && <Text>{`Hello ${username}!`}</Text>}
         <Text>{'This is the home Screen where we can see the details'}</Text>
+        <MyComponent/>
       </View>
     </View>
   );
 };
+
+const MyComponent = () => (
+  <DataTable>
+    <DataTable.Header>
+      <DataTable.Title>Dessert</DataTable.Title>
+      <DataTable.Title numeric>Calories</DataTable.Title>
+      <DataTable.Title numeric>Fat</DataTable.Title>
+    </DataTable.Header>
+
+    <DataTable.Row>
+      <DataTable.Cell>Frozen yogurt</DataTable.Cell>
+      <DataTable.Cell numeric>159</DataTable.Cell>
+      <DataTable.Cell numeric>6.0</DataTable.Cell>
+    </DataTable.Row>
+
+    <DataTable.Row>
+      <DataTable.Cell>Ice cream sandwich</DataTable.Cell>
+      <DataTable.Cell numeric>237</DataTable.Cell>
+      <DataTable.Cell numeric>8.0</DataTable.Cell>
+    </DataTable.Row>
+
+    <DataTable.Pagination
+      page={1}
+      numberOfPages={3}
+      onPageChange={page => {
+        console.log(page);
+      }}
+      label="1-2 of 6"
+    />
+  </DataTable>
+);
