@@ -36,7 +36,7 @@ export const HelloUser = () => {
       <View style={Styles.form}>
         {username !== "" && <Text>{`Hello ${username}!`}</Text>}
         <Text>{"This is the home Screen where we can see the details"}</Text>
-        <AttendeeTable />
+        <AttendeeTable {...this.props}/>
       </View>
     </View>
   );
